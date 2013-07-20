@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" heref="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfont.net/startup%2Fcode%2Fsocial-buttons.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
 
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
@@ -18,108 +18,181 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="styleshee" type="text/css">
     
     <style type="text/css">
+      
+      /* Large desktop */
+      @media(min-width:980px){
+      body{
+      padding-top: 60px;
+      }
+
+      .linediv-l {
+      border-right: 1px white solid;
+      }
+
+
+      .linediv-r {
+      border-left: 1px white solid;
+      }
+      }
+
+      /* Landscapge phones and down */
+      @media (max-width:480px){
+      .copy {
+      padding: 2.5% 10%;
+      }
+      
+      .linediv-l {
+      border-bottom:1px white solid;
+      }
+
+      .linediv-r {
+      border-top: 1px white solid;
+      }
+
+
+      /* All form factors */
+
+      /* Main body and headings */
       body {
-      padding-top: 20px;
-      padding-bottom: 40px;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
       }
-      .container {
-      width: 960px;
+      
       }
-      p.lead {
-      padding-top: 15px;
-      }
-      .navigation, .pitch, .section1, .section2, .faq, .footer{
-      padding: 10px 0px 10px 0px;
-      }
-      .video, .thermometer, .order, .social {
-      border: 1px dotted;
-      text-align: center;
-      }
-      .video {
-      /*Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-      height: 124px;
-      line-height: 124px;
-      }
-      .thermometer, .order, .social {
-      /* line-height to vertically center: http://phrogz.net/css/vertica-align/index.html */
-      height:40px;
-      line-height:40px;
-      }
-      div.row {
-      border: 1px solid;
-      }
+
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row navigation">
-	<div class="span2 logo">
-	  Logo
-	</div>
-	<div class="span6 blank">
-	  Blank
-	</div>
-	<div class="span4 about">
-	  About
-	</div>
-      </div>
-      
-      <div class="row heading">
-	<div class="span12">
-	  <h1>Bitstarter Title</h1>
-	</div>
-      </div>
-      
-      <div class="row subheading">
-	<div class="span12">
-	  <p class="lead">This is my first bitstarter project.</p>
-	</div>
-      </div>    
-      
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
-	</div>
-	<div class="span6">
-	  <div class="thermometer">
-	    Thermometer
-	  </div>
-	  <div class="order">
-	    Order
-	  </div>
-	  <div class="social">
-	    Social
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row section1">
-	<div class="span12">
-	  Marketing section 1
-	</div>
-      </div>
-      
-      
-      <div class="row section2">
-	<div class="span12">
-	  Marketing section 2
-	</div>
-      </div>
+    
+    <!-- Mobile-friendly navbar adapted from example. -->
+    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
 
-      <div class="row faq">
-	<div class="span12">
-	  FAQ
-	</div>
-      </div>
-
-      <div class="row footer">
-	<div class="span12">
-	  Footer
+	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="brand" href="#">Bitstarter</a>
+	  <div class="nav-collapse collapse">
+	    <ul class="nav">
+	      <li class="active"><a href="#">Home</a></li>
+	      <li><a href="#about">About</a></li>
+	      <li><a href="#contact">Contact</a></li>
+	    </ul>
+	    </div><!--/.nav-collapse -->
 	</div>
       </div>
     </div>
 
+    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+    <!-- http://stackoverflow.com/a/12270322 -->
+    <div class="container">
+      
+     <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
+     <!-- www.google.com/fonts/specimen/Ubuntu -->
+     <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
+     <div class="row-fluid heading">
+       <div class="span12">
+	 <h1>Product</h1>
+       </div>
+     </div>
+     <div class="row-fluid subheading">
+       <div class="span12">
+	 <p class="lead">One sentence description.</p>
+       </div>
+     </div>
+     <div class="row-fluid subheading">
+       <div class="span5 offset1 video">
+	 <img class="img-polaroid" src="http://placehold.it/480x300">
+       </div>
+   
+       <!-- We define a new 'actions' idv to contain statistics, order, and share buttons.-->
+       <div class="span5 actions">
+	 <div class="span8 offset2">
+	   <div class="statistics">
+	     <div class="span4">
+	       <!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts, illustrating media queries. -->
+	       <div class="linediv-l">
+		 <h3>1000</h3>
+		 <p>backers</p>
+	       </div>
+	     </div>
+	     <div class="span4">
+	       <div class="linediv-c">
+		 <h3>$6000</h3>
+		 <p>of $10,000</p>
+	       </div>
+	     </div>
+	     <div class="span4">
+	       <div class="linediv-r">
+		 <h3>10</h3>
+		 <p>days left</p>
+	       </div>
+	     </div>
+	   </div>
+	 </div>
+	 
+	 <div class="span10 offset">
+	   <!-- progress bar -->
+	   <div class="thermometer progress active">
+	     <div class="bar bar-success" style="width: 60%;"></div>
+	     <div class="bar bar-warning" style="width: 40%;"></div>
+	   </div>
+	 </div>
+	 <div class="span6 offset3 order">
+	   <!-- standard bootstrap button. -->
+	   <button class="btn btn-success btn-large">Preorder</button>
+	 </div>
+	 <div class="span8 offset2 social">
+	   <!-- social buttons are not included in default bootstrap.-->
+	   <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+	   <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+	 </div>
+       </div>
+     </div>
+
+     <!-- the market copy begins -->
+
+     <div class="row-fluid section1">
+       <div class="span5 offset1 asset">
+	 <img class="img-polaroid" src="http://placehold.it/480x300">
+       </div>
+       <div class="span5 copy">
+	 <p> Imagine if a streetlamp knew you were coming. It could announce your arrival from a distance. If you were on a date, it could help set the mood. It could ring in the new year with dazzling effects, change color at will, even announce days in advance when its bulb was set to blow.
+	   In fact, there is nothing future-tense about this fantastical vision; in a handful of municipalities in Europe, streetlights have become downright chatty.
+	   The system is called Tvilight. It was invented by Dutch designer Chintan Shah while a student at Delft University of Technology in the Netherlands. When flying overseas, he noticed streetlamps lighting streets that, in the middle of the night, were empty and desolate.
+	   "I started researching," he says. "I wondered, why are they burning? How much does it cost? Is this a problem? I discovered some amazing numbers."
+	   Read more: 12 amazing designs from the past 100 years
+	 </p>
+
+       </div>
+     </div>
+     
+     <div class="row-fluid section2">
+       <div class="span5 offset1 copy copy-right">
+	 <p>
+	   Certainly the team will be different to our last game. I'm used to resolving my own problems without looking at theirs. We certainly cannot base ourselves on our opponents because we'd be beaten before we start. We have a precise identity and we'll play the way we know how to play. If in the end they are better than us, I'll pay my compliments, but certainly until the very last minute has been played, none of us will feel beaten.
+	   
+	   There were two reasons I made changes to my team to face Sweden. One, to give some girls a rest as it would have been three games in a week, but, above all, to give the chance to some of the girls who have played less to get the experience of playing in a EURO and show their qualities. We are not 11 first teamers and 11 reserves. Apart from the first ten minutes of the second half, above all the first half and the last 20 minutes, we did well and never had problems, so I'm happy with those who have played less.
+	   
+	   There's not one German player to pick out in particular. Of course, the Germany side, given their results in previous tournaments, are a side to respect and they have a great tradition. We will face them trying to impose our own game, which can cause problems to anybody.
+	   
+	   Exactly 31 years have passed [since Cabrini won the 1982 FIFA World Cup for Italy against West Germany], football was different then, so it has no relation to this game tomorrow. Games between Italy and Germany have always been very passionate affairs and there has always been a great deal of interest in them.
+	 </p>
+       </div>
+       <div class="span5 asset">
+	 <img class="img-polaroid" src="http://placehold.it/480x300">
+       </div>
+     </div>
+	  
+
+    </div>
+    
   </body>
 </html>
 
